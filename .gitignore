@@ -124,7 +124,6 @@ output.json
 # Android Patch
 
 # External native build folder generated in Android Studio 2.2 and later
-
 # NDK
 obj/
 
@@ -319,3 +318,4 @@ cmake-build-*/
 # End of https://www.gitignore.io/api/git,java,kotlin,android,intellij,androidstudio
 /.idea/codeStyles/codeStyleConfig.xml
 /.idea/codeStyles/Project.xml
+/.idea/runConfigurations.xml
