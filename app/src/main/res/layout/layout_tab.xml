@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:minHeight="56dp">
+
+    <ImageButton
+        android:id="@+id/imgbCamera"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.20"
+        android:background="@color/colorPrimary"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:src="@drawable/ic_camera_white" />
+
+    <TextView
+        android:id="@+id/txtChats"
+        style="@style/tab"
+        android:text="@string/chats" />
+
+    <TextView
+        android:id="@+id/txtStatus"
+        style="@style/tab"
+        android:text="@string/status" />
+
+    <TextView
+        android:id="@+id/txtCalls"
+        style="@style/tab"
+        android:text="@string/calls" />
+
+</LinearLayout>
