@@ -7,6 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import io.androidedu.hoop.R
+import io.androidedu.hoop.entity.HoopStatusInfoEntity
 import io.androidedu.hoop.model.StatusModel
 
 class StatusViewHolder(parent: ViewGroup) :
@@ -26,7 +27,7 @@ class StatusViewHolder(parent: ViewGroup) :
     }
 
 
-    fun bind(statusModel: StatusModel, onItemClickListener: (statusModel: StatusModel) -> Unit) {
+    fun bind(statusModel: HoopStatusInfoEntity, onItemClickListener: (statusModel: HoopStatusInfoEntity) -> Unit) {
 
         profilePhoto.setBackgroundResource(statusModel.profilePhoto)
         userName.text = statusModel.userName

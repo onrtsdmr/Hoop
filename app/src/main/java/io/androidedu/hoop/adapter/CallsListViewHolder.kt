@@ -7,6 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import io.androidedu.hoop.R
+import io.androidedu.hoop.entity.HoopCallsInfoEntity
 import io.androidedu.hoop.model.CallModel
 
 class CallsListViewHolder(parent: ViewGroup) :
@@ -32,7 +33,7 @@ class CallsListViewHolder(parent: ViewGroup) :
     }
 
 
-    fun bind(callsModel: CallModel, onItemClickListener: (callsModel: CallModel) -> Unit) {
+    fun bind(callsModel: HoopCallsInfoEntity, onItemClickListener: (callsModel: HoopCallsInfoEntity) -> Unit) {
 
         profilePhoto.setBackgroundResource(callsModel.profilePhoto)
         userName.text = callsModel.userName

@@ -2,12 +2,12 @@ package io.androidedu.hoop.adapter
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import io.androidedu.hoop.model.CallModel
+import io.androidedu.hoop.entity.HoopCallsInfoEntity
 
 
 class CallsListAdapter(
-    val callList: ArrayList<CallModel>,
-    val onItemClickListener: (callModel: CallModel) -> Unit
+    val callList: ArrayList<HoopCallsInfoEntity>,
+    val onItemClickListener: (callModel: HoopCallsInfoEntity) -> Unit
 ) : RecyclerView.Adapter<CallsListViewHolder>() {
 
 

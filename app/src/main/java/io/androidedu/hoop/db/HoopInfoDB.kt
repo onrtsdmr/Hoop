@@ -4,9 +4,11 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import io.androidedu.hoop.dao.HoopInfoDao
+import io.androidedu.hoop.entity.HoopCallsInfoEntity
 import io.androidedu.hoop.entity.HoopInfoEntity
+import io.androidedu.hoop.entity.HoopStatusInfoEntity
 
-@Database(entities = [HoopInfoEntity::class], version = 1)
+@Database(entities = [HoopInfoEntity::class,HoopCallsInfoEntity::class,HoopStatusInfoEntity::class], version = 1)
 abstract class HoopInfoDB : RoomDatabase() {
 
     abstract fun getHoopInfoDao(): HoopInfoDao

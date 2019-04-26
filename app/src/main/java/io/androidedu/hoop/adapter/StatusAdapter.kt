@@ -2,11 +2,12 @@ package io.androidedu.hoop.adapter
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import io.androidedu.hoop.entity.HoopStatusInfoEntity
 import io.androidedu.hoop.model.StatusModel
 
 class StatusAdapter(
-    val statusList: ArrayList<StatusModel>,
-    val onItemClickListener: (statusModel: StatusModel) -> Unit
+    val statusList: ArrayList<HoopStatusInfoEntity>,
+    val onItemClickListener: (statusModel: HoopStatusInfoEntity) -> Unit
 ) : RecyclerView.Adapter<StatusViewHolder>() {
 
 

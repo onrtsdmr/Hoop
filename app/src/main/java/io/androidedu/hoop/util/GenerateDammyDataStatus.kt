@@ -1,13 +1,90 @@
 package io.androidedu.hoop.util
 
 import io.androidedu.hoop.R
+import io.androidedu.hoop.entity.HoopStatusInfoEntity
 import io.androidedu.hoop.model.StatusModel
 
 object GenerateDammyDataStatus {
 
-    fun getDammyDataStatus(): ArrayList<StatusModel> = ArrayList<StatusModel>().apply {
+    fun getDammyDataStatus(): ArrayList<HoopStatusInfoEntity> = ArrayList<HoopStatusInfoEntity>().apply {
 
-        val StatusModel = StatusModel(
+
+        val hoopStatusInfoEntity = HoopStatusInfoEntity(
+            profilePhoto = R.drawable.ic_onur,
+            userName = "Onur",
+            time = "16:40"
+        )
+        val hoopStatusInfoEntity1 = HoopStatusInfoEntity(
+            profilePhoto = R.drawable.ic_zeynep,
+            userName = "Zeynep",
+
+            time = "16:40"
+
+        )
+        val hoopStatusInfoEntity2 = HoopStatusInfoEntity(
+            profilePhoto = R.drawable.ic_adnan_ilerci,
+            userName = "Adnan İlerçi",
+
+            time = "16:40"
+
+        )
+        val hoopStatusInfoEntity3 = HoopStatusInfoEntity(
+            profilePhoto = R.drawable.ic_banu,
+            userName = "Banu Hoca",
+
+            time = "16:40"
+
+        )
+        val hoopStatusInfoEntity4 = HoopStatusInfoEntity(
+            profilePhoto = R.drawable.ic_berkcan,
+            userName = "Berkcan",
+
+            time = "16:40"
+
+        )
+        val hoopStatusInfoEntity5 = HoopStatusInfoEntity(
+            profilePhoto = R.drawable.ic_emre,
+            userName = "Emre",
+
+            time = "16:40"
+
+        )
+        val hoopStatusInfoEntity6 = HoopStatusInfoEntity(
+            profilePhoto = R.drawable.ic_erol_balkanay,
+            userName = "Erol Hoca",
+
+            time = "16:40"
+
+        )
+        val hoopStatusInfoEntity7 = HoopStatusInfoEntity(
+            profilePhoto = R.drawable.ic_rabia,
+            userName = "Rabia",
+
+            time = "16:40"
+
+        )
+        val hoopStatusInfoEntity8 = HoopStatusInfoEntity(
+            profilePhoto = R.drawable.ic_samet,
+            userName = "Samet",
+
+            time = "16:40"
+        )
+
+
+        add(hoopStatusInfoEntity)
+        add(hoopStatusInfoEntity1)
+        add(hoopStatusInfoEntity2)
+        add(hoopStatusInfoEntity3)
+        add(hoopStatusInfoEntity4)
+        add(hoopStatusInfoEntity5)
+        add(hoopStatusInfoEntity6)
+        add(hoopStatusInfoEntity7)
+        add(hoopStatusInfoEntity8)
+
+
+    }
+
+        /*val StatusModel = StatusModel(
                 R.drawable.ic_onur,
                 "Onur",
                 "16:40"
@@ -87,6 +164,6 @@ object GenerateDammyDataStatus {
         add(StatusModel6)
         add(StatusModel7)
         add(StatusModel8)
-    }
+    }*/
 
 }

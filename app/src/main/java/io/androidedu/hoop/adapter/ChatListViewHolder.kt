@@ -7,6 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import io.androidedu.hoop.R
+import io.androidedu.hoop.entity.HoopInfoEntity
 import io.androidedu.hoop.model.ChatModel
 
 // Code with ❤️
@@ -39,7 +40,7 @@ class ChatListViewHolder(parent: ViewGroup) :
         txtDate = itemView.findViewById(R.id.txtDate)
     }
 
-    fun bind(chatModel: ChatModel, onItemClickListener: (chatModel: ChatModel) -> Unit) {
+    fun bind(chatModel: HoopInfoEntity, onItemClickListener: (chatModel: HoopInfoEntity) -> Unit) {
         imgbProfile.setBackgroundResource(chatModel.profilePhoto)
         txtUserName.text = chatModel.userName
         txtUserMessage.text = chatModel.userMessage

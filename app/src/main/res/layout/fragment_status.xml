@@ -16,7 +16,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/ic_onur" />
+                android:background="@drawable/ic_onur"/>
 
         <LinearLayout
                 android:layout_width="match_parent"
@@ -29,26 +29,26 @@
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Durumum" />
+                    android:text="Durumum"/>
 
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Durum ekle"
-                    android:textColor="@android:color/darker_gray" />
+                    android:textColor="@android:color/darker_gray"/>
         </LinearLayout>
 
         <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/ic_camera_alt_black_24dp" />
+                android:background="@drawable/ic_camera_alt_black_24dp"/>
 
         <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/ic_create_green_24dp" />
+                android:background="@drawable/ic_create_green_24dp"/>
 
     </LinearLayout>
 
@@ -57,25 +57,28 @@
             android:layout_height="wrap_content"
             android:background="@android:color/darker_gray"
             android:text="Güncellemeler"
-            android:textColor="@color/colorPrimaryDark" />
+            android:textColor="@color/colorPrimaryDark"/>
 
     <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rcycStatusView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
 
     <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/darker_gray"
             android:text="Görülen Güncellemeler"
-            android:textColor="@color/colorPrimaryDark" />
+            android:textColor="@color/colorPrimaryDark"
+            />
 
 
     <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rcycStatusMuted"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
 
 
 </LinearLayout>

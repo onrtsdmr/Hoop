@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import io.androidedu.hoop.adapter.ChatListAdapter
 import io.androidedu.hoop.R
 import io.androidedu.hoop.dao.HoopInfoDao
+import io.androidedu.hoop.db.HoopInfoDB
 
 import io.androidedu.hoop.util.GenerateDammyData
 import kotlinx.android.synthetic.main.fragment_chats.*
@@ -23,6 +24,8 @@ class ChatsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+
         return inflater.inflate(R.layout.fragment_chats, container, false)
     }
 
@@ -41,6 +44,8 @@ class ChatsFragment : Fragment() {
 
 
     }
+
+
 
     companion object {
 

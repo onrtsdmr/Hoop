@@ -2,6 +2,7 @@ package io.androidedu.hoop.adapter
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import io.androidedu.hoop.entity.HoopInfoEntity
 import io.androidedu.hoop.model.ChatModel
 
 
@@ -16,8 +17,8 @@ import io.androidedu.hoop.model.ChatModel
 
 
 class ChatListAdapter(
-    val chatList: ArrayList<ChatModel>,
-    val onItemClickListener: (chatModel: ChatModel) -> Unit
+    val chatList: ArrayList<HoopInfoEntity>,
+    val onItemClickListener: (chatModel: HoopInfoEntity) -> Unit
 ) : RecyclerView.Adapter<ChatListViewHolder>() {
 
 
