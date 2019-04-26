@@ -1,80 +1,90 @@
 package io.androidedu.hoop.ui
 
+
 import android.os.Bundle
-import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentTransaction
+import androidx.viewpager.widget.ViewPager
+import com.google.android.material.tabs.TabLayout
 import io.androidedu.hoop.R
-import kotlinx.android.synthetic.main.layout_tab.*
+import io.androidedu.hoop.adapter.HoopViewPagerAdapter
+import io.androidedu.hoop.db.HoopInfoDB
+import io.androidedu.hoop.entity.HoopInfoEntity
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlin.concurrent.thread
 
-class MainActivity : AppCompatActivity(), View.OnClickListener {
+class MainActivity : AppCompatActivity(), TabLayout.BaseOnTabSelectedListener<TabLayout.Tab>,
+    ViewPager.OnPageChangeListener {
+    override fun onPageScrollStateChanged(state: Int) {
+
+    }
+
+    override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {
+
+    }
+
+    override fun onPageSelected(position: Int) {
+
+    }
+
+    override fun onTabReselected(p0: TabLayout.Tab?) {
+        Toast.makeText(this, "onTabReselected", Toast.LENGTH_SHORT).show()
+    }
+
+    override fun onTabUnselected(p0: TabLayout.Tab?) {
+        Toast.makeText(this, "onTabUnselected", Toast.LENGTH_SHORT).show()
+
+    }
+
+    override fun onTabSelected(p0: TabLayout.Tab?) {
+        Toast.makeText(this, "onTabSelected", Toast.LENGTH_SHORT).show()
+
+    }
+
 
     private val chatsFragment by lazy { ChatsFragment.newInstance() }
-    private val statusFragment by lazy { StatusFragment.newInstance() }
     private val cameraFragment by lazy { CameraFragment.newInstance() }
     private val callsFragment by lazy { CallsFragment.newInstance() }
+    private val statusFragment by lazy { StatusFragment.newInstance() }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        txtCalls.setOnClickListener(this)
-        txtChats.setOnClickListener(this)
-        txtStatus.setOnClickListener(this)
-        imgbCamera.setOnClickListener(this)
+        val fragmentList = ArrayList<Fragment>()
+        fragmentList.add(cameraFragment)
+        fragmentList.add(chatsFragment)
+        fragmentList.add(statusFragment)
+        fragmentList.add(callsFragment)
 
-        addFragment(R.id.frmContainer, chatsFragment)
-    }
+        val fragmentTitleList = ArrayList<String>()
+        fragmentTitleList.add("Camera")
+        fragmentTitleList.add("Chats")
+        fragmentTitleList.add("Status")
+        fragmentTitleList.add("Calls")
 
-    override fun onClick(v: View) {
 
-        when (v.id) {
+        vpHoopContainer.adapter = HoopViewPagerAdapter(fragmentTitleList, fragmentList, supportFragmentManager)
 
-            R.id.txtCalls -> {
+        tblLayHoopContainer.setupWithViewPager(vpHoopContainer)
 
-                replaceFragment(R.id.frmContainer, callsFragment)
-            }
+        vpHoopContainer.currentItem = 1
 
-            R.id.txtChats -> {
+        tblLayHoopContainer.addOnTabSelectedListener(this)
+        vpHoopContainer.addOnPageChangeListener(this)
 
-                replaceFragment(R.id.frmContainer, chatsFragment)
-            }
 
-            R.id.txtStatus -> {
 
-                replaceFragment(R.id.frmContainer, statusFragment)
-            }
 
-            R.id.imgbCamera -> {
 
-                replaceFragment(R.id.frmContainer, cameraFragment)
-            }
-        }
+
+
+
     }
 
 
-}
-
-inline fun FragmentManager.inTransaction(function: FragmentTransaction.() -> FragmentTransaction) {
-
-    beginTransaction().function().commit()
-}
-
-fun AppCompatActivity.addFragment(containerId: Int, fragment: Fragment) {
-
-    supportFragmentManager.inTransaction {
-
-        add(containerId, fragment)
-    }
-}
 
 
-fun AppCompatActivity.replaceFragment(containerId: Int, fragment: Fragment) {
-
-    supportFragmentManager.inTransaction {
-
-        replace(containerId, fragment)
-    }
 }
